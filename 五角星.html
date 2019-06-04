@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{background: #eee;}
+			#oc{width: 1000px;height: 1000px;background: #fff;}
+		</style>
+	</head>
+	<body>
+		<canvas id="oc" width="1000" height="1000"></canvas>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oC =document.getElementById("oc");
+				var oAC =oC.getContext('2d');
+				
+				
+				var num = 0;
+				var timer = setInterval(function(){
+					
+					num++
+					oAC.clearRect(0,0,oC.width,oC.height);
+					
+					
+					
+					oAC.rotate(Math.PI/180);
+					oAC.translate(7.5,-9);
+
+					
+					
+					oAC.lineWidth = 10;
+					oAC.strokeStyle = 'lightgoldenrodyellow';
+					oAC.beginPath();
+					
+					
+					oAC.moveTo(523,233);
+					oAC.lineTo(405,591);
+					oAC.lineTo(712,369);
+					oAC.lineTo(332,368);
+					// oAC.lineTo(250,140);
+				  	oAC.lineTo(642,593);
+					oAC.closePath()
+					oAC.fillStyle = 'lightgoldenrodyellow';
+					oAC.fill();
+					
+					
+					
+					oAC.stroke()
+					
+					
+
+					oAC.restore();
+				},1);
+				
+				
+				
+				
+				
+				};
+		
+			
+		</script>		
+	</body>
+</html>
