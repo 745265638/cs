@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//2.请用js封装函数,完成对数组的添加,删除,统计内容个数等功能
+			//1.添加
+			function Map() {
+				var obj = {};
+				this.add = function(key, value) {
+					obj[key] = value;
+				};
+				console.log(obj);
+
+
+				this.gets = function(key) {
+					if (key in obj) {
+						return obj[key];
+					}
+				};
+				this.getSize = function() {
+					var j = 0;
+					for (var i in obj) {
+						j++;
+					}
+					return j;
+				};
+				this.delet = function(key) {
+					console.log(key in obj)
+					if (key in obj) {
+						delete obj[key];
+					}
+
+				};
+				this.has = function(key) {
+					if (key in obj) {
+						return true;
+					} else {
+						return false;
+					}
+				}
+				
+				
+			}
+			for(key in obj){
+				return obj[key];
+			}
+
+			//调用
+			// console.log(Map().add(1,'ceshi'));
+			var  map = new Map();
+			//添加
+			map.add(1,'test');
+			map.add(4,'helloWorld');
+			map.add(3,'hello');
+			map.add(2,'what?');//为什么第二个参数设置不进去
+			//获取数据
+			console.log(map.gets(1));
+			console.log(map.gets(2));
+			//获取长度
+			console.log(map.getSize());
+			console.log(map.getSize());
+			//删除
+			map.delet(2);
+			console.log(map.getSize());
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		希望获取到页面中所有的checkbox怎么做
+		课程选择：
+		<input type="checkbox" name="fuxuan" value="语文"/>语文
+		<input type="checkbox" name="fuxuan" value="英语"/>英语
+		<input type="checkbox" name="fuxuan" value="英语"/>化学
+		<input type="checkbox" name="fuxuan" value="英语"/>政治
+		<input type="checkbox" name="fuxuan" value="英语"/>音乐
+		<script>
+			var inputs = document.getElementsByTagName("input"); //获取所有的input标签对象
+			var checkboxArray = []; //初始化空数组，用来存放checkbox对象。
+			for (var i = 0; i < inputs.length; i++) {
+				var obj = inputs[i];
+				if (obj.type == 'checkbox') {
+					checkboxArray.push(obj);
+				}
+			}
+			console.log(checkboxArray);
+		</script>
+	</body>
+</html>
